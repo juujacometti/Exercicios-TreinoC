@@ -7,20 +7,35 @@ int main() {
 Após isso, o usuário deve informar um valor de temperatura em 'Celsius' ou 'Fahrenheit', e de acordo com a opção escolhida, o programa deve informar o resultado no método contrário.*/ 
 
 // Variáveis:
-    double temperatura; C, F;
+    double temperatura, C, F;
     int escolha;
 
-// Solicitação p usuário:
-    printf("Conversor de temperatura \nDigite a temperatura que voce deseja converter");
-    scanf("%i", &temperatura);
+// Solicitação p usuário (temperatura):
+    printf("** Conversor de temperatura ** \nDigite a temperatura que deseja converter: \n");
+    scanf("%lf", &temperatura);
 
-    printf("\nPara qual metodo voce prefere realizar a conversao? \n1 - Celsius \n2 - Fahrenheit?");
-    scanf("%i", &escolha);
+// Solicitação p usuário (unidade de temperatura digitada):
+    printf("Informe em qual escala a temperatura informada esta: \n1-Celsius \n2-Fahrenheit \n");
+    scanf("%d", &escolha);
 
+// Conversão de temperatura:
+    // Celsius - Fahrenheit:
     if (escolha == 1) {
-        
+
+        F = (temperatura * 9 / 5) + 32;
+
+        // Demonstração da conversão:
+        printf("Temperatura indicada em Celsius = %.lf ", temperatura);
+        printf("\nTemperatura convertida para Fahrenheit = %.lf ", F);
+
     }
-    
+    // Fahrenheit - Celsius:
+    else if (escolha == 2) {
 
+        C = ( ( (temperatura - 32) * 5 ) / 9);
 
+        // Demonstração da conversão:
+        printf("Temperatura indicada em Fahrenheit = %.lf", temperatura);
+        printf("\nTemperatura convertida para Celsius = %.lf", C);
+    }
 }
