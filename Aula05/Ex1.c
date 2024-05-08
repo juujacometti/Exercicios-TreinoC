@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
-// Objetivo: Faça um programa que leia um número real qualquer e mostre o seu respectivo valor absoluto.
-
 int main() {
+
+// Objetivo: Faça um programa que leia um número real qualquer e mostre o seu respectivo valor absoluto.
 
 // Variáveis:
     float numeroReal;

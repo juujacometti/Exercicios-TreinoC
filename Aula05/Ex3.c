@@ -29,13 +29,6 @@ Após isso, o usuário deve informar um valor de temperatura em 'Celsius' ou 'Fa
         printf("\nTemperatura convertida para Fahrenheit = %.lf ", F);
 
     }
-    // Fahrenheit - Celsius:
-    else if (escolha == 2) {
 
-        C = ( ( (temperatura - 32) * 5 ) / 9);
-
-        // Demonstração da conversão:
-        printf("Temperatura indicada em Fahrenheit = %.lf", temperatura);
-        printf("\nTemperatura convertida para Celsius = %.lf", C);
-    }
+    return 0;
 }
