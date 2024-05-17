@@ -2,7 +2,7 @@
 
 int main() {
 
-// Objetivo: Faça um programa onde o usuário informa a altura e o gênero (M/F). Calcule o peso ideal usuando as fórmulas: H = (72,7 * h) - 58 // M = (62,1 * h) 44,7 
+// Objetivo: Faça um programa onde o usuário informa a altura e o gênero (M/F). Calcule o peso ideal usuando as fórmulas: H = (72,7 * h) - 58 // M = (62,1 * h) - 44,7 
 // (H = homem; M = mulher; h = altura)
 
     int genero;
@@ -16,13 +16,19 @@ int main() {
     scanf("%d", &genero);
 
 // Calculo realizado de acordo com o genêro:
-     //Homem:
+     // Homem:
     if (genero == 1) {
     
-    H = (72,7 * altura);
+    H = (72.7 * altura) - 58;
 
     printf("Homem \nAltura: %.lf \nPeso ideal: %.2lf", altura, H);
+    }
+    
+    // Mulher:
+    else {
+        M = (62.1 * altura) - 44.7;
 
+        printf("Mulher \nAltura: %.lf \nPeso ideal %.2lf", altura, M);
     }
 
 
