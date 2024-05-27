@@ -25,9 +25,30 @@ int partition(int numerosSorteados[], int baixo, int alto) {
         }
     }
 
-//  PAREI AQUI (elemento 4)
+//  Mudança do pivô para a posição correta (após os elementos menores que ele):
     swap(&numerosSorteados[i + 1], &numerosSorteados[alto]);
+
+// Retorno do índice onde o pivô foi colocado:
     return (i + 1);
+}
+
+
+// Declaração da função 'particionar':
+int particionar(int numerosSorteados[], int baixo, int alto);
+
+void quickSort(int numerosSorteados[], int baixo, int alto) {
+
+    // Verificação se o índice 'baixo' é menor do que o 'alto':
+        if (baixo < alto) {
+        // Função 'particionar' para dividir o vetor em 2 em relação ao pivô:
+        int pi = particionar(numerosSorteados, baixo, alto);
+
+        // Ordena que os elementos menores que o pivô sejam ordenados da maneira correta (vai do índice 'baixo' até 'pi - 1'):
+        quickSort(numerosSorteados, baixo, pi -1);
+        // Ordena que os elementos maiores que o pivô sejam ordenados da maneira correta (do índice 'pi + 1 ' até 'alto'):
+        quickSort(numerosSorteados, pi + 1, alto);
+    }
+    
 }
 
 int main() {
