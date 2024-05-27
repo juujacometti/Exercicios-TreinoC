@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> // Geração de números aleatórios
 #include <time.h>
 
 int main() {
@@ -10,11 +10,11 @@ int main() {
 // Vetor:
     int numerosSorteados[6];
 
-// Definição de tamanho do sorteador:
+// Definição de tamanho (intervalo) do sorteador:
     int minimo = 1; 
     int maximo = 10;
 
-// Inicialização do sorteador:
+// Inicialização do sorteador (gerador de números aleatórios):
     srand(time(NULL)); 
 
 // Looping (sorteio):
